@@ -24,3 +24,8 @@ body{
     border-radius: 16px;
     padding: 20px;
 }
+
+.search-box{
+    position: relative;
+    
+}
