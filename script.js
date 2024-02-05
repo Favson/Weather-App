@@ -1,22 +1,19 @@
-function getWeather() {
-    const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY';
-    const cityInput = document.getElementById('city-input').value;
-    const apiUrl = `https://openweathermap.org/`;
-
-    fetch(apiUrl)
-        .then(response => response.json())
-        .then(data => {
-            const weatherResult = document.getElementById('weather-result');
-            const temperature = data.main.temp;
-            const description = data.weather[0].description;
-            const cityName = data.name;
-
-            const resultText = `Current weather in ${cityName}: ${temperature}°C, ${description}`;
-            weatherResult.textContent = resultText;
-        })
-        .catch(error => {
-            console.error('Error fetching weather data:', error);
-            const weatherResult = document.getElementById('weather-result');
-            weatherResult.textContent = 'Error fetching weather data. Please try again.';
-        });
+function getLocation(){
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(
+            position => {
+                const latitude =position.coords.latitude
+                const longitude =position.coords.longitude
+                console.log('latitude', latitude);
+                console.log('longitude', longitude);
+    
+                getweatherByCordinates(latitude, longitude)
+            },
+            error => {
+                console.error('Error getting location', error);
+            }
+        )
+    } else{
+        console.error('geolocation is not suppported by this browser');
+    }
 }
