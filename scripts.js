@@ -13,5 +13,23 @@ search.addEventListener('click', () =>{
     if(city == ""){
         return;
 
-    fetch(``)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKEY}`).then(Response => Response.json())
+    .then(json=> {
+
+        const image = document.querySelector('.weather-box img');
+        const temperature = document.querySelector('.weather-box .temperature');
+        const description = document.querySelector('.weather-box .description');
+        const humidity = document.querySelector('.weather-details .humidity span');
+        const wind = document.querySelector('.weather-details .wind span');
+        // const image = document.querySelector('.weather-details img')
+
+        switch (json.weather[0].main) {
+            case 'Clear':
+                image.src=
+                break;
+        
+            default:
+                break;
+        }
+    })
 });
