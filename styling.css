@@ -43,4 +43,28 @@ body{
     outline: none;
     border-radius: 10px;
     font-size: 22px;
+    color: #ffff;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0 48px 0 42px;
+}
+
+.search-box input::placeholder{
+    color: #ffff;
+    text-transform: capitalize;
+
+}
+
+.search-box button{
+    position: absolute;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 28px;
+    color: #ffff;
+    padding: 0 40px 0 5px;
+    cursor: pointer;
 }
