@@ -17,3 +17,7 @@ function getLocation(){
         console.error('geolocation is not suppported by this browser');
     }
 }
+
+function getweatherByCordinates(latitude, longitude) {
+    const apiKey =
+}
