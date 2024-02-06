@@ -241,3 +241,31 @@ body{
 .city-hide{
     display: none;
 }
+
+#clone-info-weather,
+#clone-info-humidity,
+#clone-info-wind{
+    position: absolute;
+    transform: translateY(-100%);
+}
+
+#clone-info-weather .weather{
+    transform: translateY(120%);
+    transition: transform 1s ease, opacity 0s;
+    transition-delay: 0s, 2s;
+}
+
+.weather-box:not(.active) #clone-info-weather .weather {
+    opacity:0;
+    transition-delay: 0s;
+}
+
+.active-clone#clone-info-weather .weather {
+    transform: translateY(0%);
+}
+
+#clone-info-weather,
+#clone-info-humidity,
+#clone-info-wind{
+    
+}
