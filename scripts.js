@@ -67,6 +67,8 @@ search.addEventListener('click', () =>{
             description.innerHTML = `${json.weather[0].description}`
             humidity.innerHTML =`${json.main.humidity}%`
             wind.innerHTML=`${parseInt(json.wind.speed)}Km/h`
+
+            const infoWeather = document
         }
         document.querySelector('.search-box input').value = ''
 
