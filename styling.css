@@ -224,7 +224,7 @@ body{
     width: 100%;
     text-align: center;
     /* align-items: center; */
-    margin-top: 110px;
+    margin-top: 70px;
 }
 
 .not-found img{
@@ -234,7 +234,7 @@ body{
 .not-found p{
     font-size: 22px;
     font-weight: 500;
-    margin-top: 8px;
+    margin-top: -20px;
 }
 
 .city-hide{
