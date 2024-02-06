@@ -19,17 +19,18 @@ body{
 .container{
     position: relative;
     width: 30%;
-    height: 555px;
+    height: 100px;
     background-color: rgba(255, 255, 255, .2);
     backdrop-filter: blur(20px);
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 16px;
     padding: 20px;
     color: #ffff;
+    transition: height .6s ease;
 }
 .container::before {
     width: 100px;
-    height: 100px;
+    height: 50px;
     content: "";
     position: absolute;
     filter: blur(5px);
@@ -99,6 +100,42 @@ body{
     margin:40px 0;
 }
 
+.weather-box,
+.weather-details,
+.not-found{
+    overflow: hidden;
+    visibility: hidden;
+}
+
+.weather-box.active,
+.weather-details.active,
+.not-found.active{
+    visibility: visible;
+}
+
+.weather-box .box,
+.not-found .box {
+    transform: translateY(-100%);
+}
+
+.weather-box.active .box,
+.not-found.active .box{
+    transform: translateY(0%);
+    transition: transform 1s ease;
+    transition-delay: .6s;
+}
+
+.weather-box .box .info-weather{
+    transform: translateY(-120%);
+}
+
+.container.active .weather-box .box .info-weather,
+.container.active .weather-details .humidity .info-humidity,
+.container.active .weather-details .wind .info-wind{
+    transform: translateY(0%);
+    transition: transform 1s ease;
+}
+
 .weather-box img{
     width: 60%;
 }
@@ -134,9 +171,24 @@ body{
 
 .weather-details .humidity,
 .weather-details .wind{
-        display: flex;
-        align-items: center;
-        width:50%;
+    display: flex;
+    align-items: center;
+    width:50%;
+    transform: translateY(-100%);
+
+}
+
+.weather-details.active .humidity,
+.weather-details.active .wind{
+    transform: translateY(0%);
+    transition: transform 1s ease;
+    transition-delay: .1.2s;
+}
+
+.weather-details .humidity .info-humidity,
+.weather-details .wind .info-wind{
+    transform: translateY((-100%));
+    overflow: hidden;
 }
 
 .weather-details .humidity{
@@ -163,4 +215,28 @@ body{
 .weather-details p{
     font-size:14px;
     font-weight: 500;
+}
+
+.not-found{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    text-align: center;
+    /* align-items: center; */
+    margin-top: 110px;
+}
+
+.not-found img{
+    width: 65%;
+}
+
+.not-found p{
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 8px;
+}
+
+.city-hide{
+    display: none;
 }
