@@ -39,10 +39,11 @@ search.addEventListener('click', () =>{
             weatherBox.classList.add('active')
             weatherDetails.classList.add('active')
             error404.classList.remove('active')
+            // image.style.height = '200px'
 
-            setTimeout(() => {
-            container.classList.remove('active')
-            }, 2500);
+            // setTimeout(() => {
+            // container.classList.remove('active')
+            // }, 2500);
 
             if(json.weather[0].main == 'Clouds') {
                 image.src='Images/clouds.png'
