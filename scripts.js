@@ -145,7 +145,7 @@ getWeatherWithLocation.addEventListener('click',()=>{
 })
 
 function getWeatherByCoordinates(latitude, longitude) {
-    const apiKey = '42d7323936c0710f4e4a782af3390eb4';
+    const apiKey = '012fd6ecfa215db82b32c682e4c1cfdd';
 
     // Make an API request to OpenWeatherMap using coordinates
     fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`)
