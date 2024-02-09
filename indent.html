@@ -14,8 +14,9 @@
         <div class="search-box">
             <i class='bx bxs-map'></i>
             <input type="text" placeholder="Enter Your Location" autofocus spellcheck="false">
-            <button class='bx bx-search-alt-2'></button>
+            <button class='bx bx-search-alt-2'></button><br>
         </div>
+        <button id="getWeatherWithLocation" style="background-color:rgba(255, 255, 255, .2); border:0px; outline:0px; color:white; width:100%;">Get My Location</button>
         
         <div class="weather-box">
             <div class="box">
@@ -29,12 +30,13 @@
                 </div>
             </div>
         </div>
+        
         <div class="weather-details">
             <div class="humidity">
                 <i class="bx bx-water"></i>
                 <div class="text">
                     <div class="info-humidity">
-                        <span>0%</span>
+                        <span class="humidityDisplay">0%</span>
                     </div>
                     <p>Humidity</p>
                 </div>
@@ -44,12 +46,13 @@
                 <i class="bx bx-wind"></i>
                 <div class="text">
                     <div class="info-wind">
-                        <span>0Km/h</span>
+                        <span class="windDisplay">0Km/h</span>
                     </div>
                     <p>Wind Speed</p>
                 </div>
             </div>
         </div>
+
         <div class="not-found">
             <div class="box">
                 <img src="Images/not-found.png" >

@@ -273,5 +273,6 @@ body{
 
 .active-clone#clone-info-humidity span,
 .active-clone#clone-info-wind span{
+    transition-delay: .5s;
     transform: translateY(0%);
 }
