@@ -161,7 +161,7 @@ function getWeatherByCoordinates(latitude, longitude) {
 
             // cityHide.textContent = city;
             cityHide.style.display = 'block'
-            cityHide.textContent = `${location}`
+            // cityHide.textContent = `${location}`
             container.style.height='555px' 
             container.classList.add('active')
             weatherBox.classList.add('active')
