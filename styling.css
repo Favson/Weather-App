@@ -276,3 +276,9 @@ body{
     transition-delay: .5s;
     transform: translateY(0%);
 }
+
+@media(max-width:456px){
+    .container{
+        width: 100%;
+    }
+}

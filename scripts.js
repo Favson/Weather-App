@@ -133,6 +133,7 @@ getWeatherWithLocation.addEventListener('click',()=>{
                 console.log('Latitude:', latitude);
                 console.log('Longitude:', longitude);
 
+
                 getWeatherByCoordinates(latitude, longitude);
             },
             error => {
@@ -152,16 +153,26 @@ function getWeatherByCoordinates(latitude, longitude) {
         .then(response => response.json())
         .then(data => {
             // Extract relevant weather information
+
             const temperature = data.main.temp;
             const humidity = data.main.humidity;
             const description = data.weather[0].description;
             const windSpeed = data.wind.speed;
 
+            // cityHide.textContent = city;
+            cityHide.style.display = 'block'
+            cityHide.textContent = `${location}`
+            container.style.height='555px' 
+            container.classList.add('active')
+            weatherBox.classList.add('active')
+            weatherDetails.classList.add('active')
+            error404.classList.remove('active')
+
             // Update HTML content
-            const temp =document.getElementsByClassName('temperature')
-            const des = document.getElementsByClassName('description')
-            const winds = document.getElementsByClassName('windDisplay')
-            const hum = document.getElementsByClassName('humidityDisplay')
+            const temp =document.querySelector('.temperature')
+            const des = document.querySelector('.description')
+            const winds = document.querySelector('.windDisplay')
+            const hum = document.querySelector('.humidityDisplay')
 
             temp.innerText = `${(data.main.temp).toFixed(1)}°C`
             des.innerHTML = data.weather[0].description
