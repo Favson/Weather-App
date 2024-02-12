@@ -159,9 +159,7 @@ function getWeatherByCoordinates(latitude, longitude) {
             const description = data.weather[0].description;
             const windSpeed = data.wind.speed;
 
-            // cityHide.textContent = city;
             cityHide.style.display = 'block'
-            // cityHide.textContent = `${location}`
             container.style.height='555px' 
             container.classList.add('active')
             weatherBox.classList.add('active')
